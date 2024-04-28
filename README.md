@@ -3,12 +3,15 @@ This repository serves as a centralised hub for all things related to credit sco
 Welcome to the credit score repository! This project aims to explore and develop machine learning algorithms for credit scoring, with a focus on addressing the challenges posed by consumers with limited credit histories, often face difficulties in obtaining credit due to traditional scoring methods' limitations.
 This project seeks to leverage machine learning techniques to develop accurate and reliable credit scoring models specifically tailored for this demographic.
 Repository Structure:
-  -  Data
-  -  Notebooks
-  -  Scripts
-  -  Models
-  -  Results
-  -  References
+  -  Data : Contains datasets used for training and evaluation
+  -  Notebooks : VB Code/ R-studio for data preprocessing, exploratory analysis, model training and evaluation
+  -  Scripts : Python scripts for preprocessing, modeling, and evaluation tasks.
+  -  Models : Trained machine learning models for credit scoring
+  -  Results : Visualisation, tables, and model performance
+  -  References : Documentation and references to relevant literature and articles
+  -  Documentation : Detailed instructions on using the code and reproducing research results
+  -  License : Open-source license for the repository
+  -  Contribution Guidelines : Guidelines for contributing to the project
 # Getting Started
 To get started with this project, follow these steps:
 1. Clone the repository to your local machine
