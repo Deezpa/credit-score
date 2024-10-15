@@ -1,4 +1,4 @@
-500 profiles for credit scoring
+# 500 profiles for credit scoring
 
 # to create a dataset with 500 profiles for credit scoring
 ## dataset characteristics and the information 
@@ -25,16 +25,18 @@
 #
 #
 ### Python Code to Generate the Dataset
+# Import necessary libraries
 import pandas as pd
 import numpy as np
 from faker import Faker
 
+# Initialize Faker library for synthetic data generation
 fake = Faker()
 
-# Define the number of profiles
+# Define the number of profiles for the dataset
 num_profiles = 500
 
-# Generate synthetic data
+# Generate synthetic data based on the specified characteristics
 data = {
     "Profile_ID": np.arange(1, num_profiles + 1),
     "Age": np.random.randint(18, 65, size=num_profiles),
@@ -50,13 +52,18 @@ data = {
     "Gig_Economy_Participation": np.random.choice(["None", "Part-Time", "Full-Time"], size=num_profiles)
 }
 
-df = pd.DataFrame(data)
+# Create a DataFrame from the synthetic data
+df_synthetic = pd.DataFrame(data)
 
-# Anonymizing the Profile_ID
-df['Profile_ID'] = df['Profile_ID'].apply(lambda x: hash("Profile_" + str(x)) % 1000000)
+# Anonymize the Profile_ID to maintain privacy
+df_synthetic['Profile_ID'] = df_synthetic['Profile_ID'].apply(lambda x: hash(f"Profile_{x}") % 1000000)
 
-# Display the first few rows of the dataframe to verify
-print(df.head())
+# Display the first few rows of the DataFrame to verify the data
+print(df_synthetic.head())
+
+# Save the DataFrame to a CSV file
+df_synthetic.to_csv('Synthetic_Credit_Scoring_Dataset.csv', index=False)
+print("Dataset saved as 'Synthetic_Credit_Scoring_Dataset.csv'")
 
 #### This script will generate a dataset of 500 profiles with diverse and realistic data, maintaining compliance with ethical standards and privacy considerations.
 #### to reflect realistic and diverse consumer scenarios
